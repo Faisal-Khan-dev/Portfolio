@@ -11,7 +11,7 @@ const SectionWrapper = (Component: FC, idName: string) => {
 				initial="hidden"
 				whileInView="show"
 				exit="hidden"
-				viewport={{ once: false, amount: 0.15 }}
+				viewport={{ once: true, amount: 0.25 }}
 				className="padding max-w-7xl mx-auto relative z-0"
 			>
 				<span className="hash-span" id={idName}>
@@ -25,4 +25,3 @@ const SectionWrapper = (Component: FC, idName: string) => {
 };
 
 export default SectionWrapper;
-

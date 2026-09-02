@@ -24,37 +24,63 @@ const Contact = () => {
 		setForm({ ...form, [name]: value });
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+			alert("Please fill in all fields before sending!");
+			return;
+		}
+
 		setLoading(true);
-		emailjs
-			.send(
+
+		const googleSheetUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL;
+
+		try {
+			// 1. Submit to EmailJS for email notification
+			const emailPromise = emailjs.send(
 				"service_91ssn8g",
 				"template_jjegxdr",
 				{
 					from_name: form.name,
-					to_name: "Om Patel",
+					to_name: "Farhan Khan",
 					from_email: form.email,
-					to_email: "moizahmedlap2@gmail.com",
+					to_email: "lestrofarhan@gmail.com",
 					message: form.message,
 				},
 				"VeFeVdEHL9F9_i6xp",
-			)
-			.then(() => {
-				setLoading(false);
-				alert(
-					"A humble thanks for reaching me out. I will respond to you as soon as possible.",
-				);
-				setForm({
-					name: "",
-					email: "",
-					message: "",
+			);
+
+			// 2. Submit to Google Sheet Web App (if configured)
+			let sheetPromise: Promise<unknown> = Promise.resolve();
+			if (googleSheetUrl) {
+				const formData = new FormData();
+				formData.append("name", form.name);
+				formData.append("email", form.email);
+				formData.append("message", form.message);
+				formData.append("timestamp", new Date().toLocaleString());
+
+				sheetPromise = fetch(googleSheetUrl, {
+					method: "POST",
+					body: formData,
+					mode: "no-cors",
 				});
-			})
-			.catch((error) => {
-				setLoading(false);
-				alert("Sorry!! Something went wrong!!");
+			}
+
+			await Promise.allSettled([emailPromise, sheetPromise]);
+
+			setLoading(false);
+			alert(
+				"A humble thanks for reaching out! Your message has been received and saved.",
+			);
+			setForm({
+				name: "",
+				email: "",
+				message: "",
 			});
+		} catch (error) {
+			setLoading(false);
+			alert("Sorry!! Something went wrong. Please try again.");
+		}
 	};
 
 	return (
@@ -105,9 +131,9 @@ const Contact = () => {
 					</label>
 					<button
 						type="submit"
-						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-purple-700 transition-colors cursor-pointer"
 					>
-						{loading ? "Sending..." : "Sent"}
+						{loading ? "Sending..." : "Send"}
 					</button>
 				</form>
 			</motion.div>

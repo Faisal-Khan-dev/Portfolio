@@ -15,19 +15,19 @@ export const navLinks = [
 
 const services = [
 	{
-		title: "UI/UX Designer",
-		icon: "/backend.webp",
-	},
-	{
-		title: "Full Stack Web Developer",
+		title: "Full-Stack Web Developer",
 		icon: "/web.webp",
 	},
 	{
-		title: "App Developer",
+		title: "Frontend Specialist (React & Next.js)",
 		icon: "/mobile.webp",
 	},
 	{
-		title: "Software Engineer",
+		title: "Backend & API Engineer",
+		icon: "/backend.webp",
+	},
+	{
+		title: "Generative AI SaaS Developer",
 		icon: "/creator.webp",
 	},
 ];
@@ -70,101 +70,83 @@ const technologies = [
 		icon: "/tech/threejs.webp",
 	},
 	{
-		name: "git",
+		name: "Git",
 		icon: "/tech/git.webp",
 	},
 	{
-		name: "figma",
-		icon: "/tech/figma.webp",
+		name: "GitHub",
+		icon: "/tech/github.webp",
 	},
 	{
-		name: "wordpress",
-		icon: "/tech/wordpress.webp",
-	},
-	{
-		name: "bootstrap",
-		icon: "/tech/bootstrap.webp",
+		name: "Vercel",
+		icon: "/tech/vercel.svg",
 	},
 ];
 
 const experiences = [
   {
-    title: "Frontend Developer Intern",
-    company_name: "CodeAlpha",
-    icon: "/company/codeAlpha.png",
-    iconBg: "#1D1836",
-    date: "March 2025 - April 2025",
-    points: [
-      "Worked as a Frontend Developer Intern focusing on modern UI creation using HTML, CSS, and JavaScript.",
-      "Collaborated with the development team to build responsive and interactive web components.",
-      "Gained hands-on experience in frontend optimization, layout design, and reusable component development.",
-      "Successfully completed internship projects and delivered clean, structured, and maintainable code.",
-    ],
-  },
-  {
-    title: "MERN Stack Developer",
-    company_name: "Applotech",
-    icon: "/company/applotech.png",
-    iconBg: "#1D1836",
-    date: "June 2025 - Present",
-    points: [
-      "Working as a MERN Stack Developer, building scalable full-stack applications using React.js, Node.js, Express.js, and MongoDB.",
-      "Developed and maintained dashboard systems with role-based authentication and dynamic data rendering.",
-      "Integrated RESTful APIs and optimized frontend performance using Tailwind CSS, MUI, and Shadcn UI.",
-      "Collaborating with cross-functional teams to deliver efficient, user-friendly web solutions for clients.",
-    ],
-  },
-  {
-    title: "Web & App Development Trainee",
-    company_name: "Saylani Bootcamp",
+    title: "Full-Stack Developer",
+    company_name: "Saylani Tech Limited",
     icon: "/company/saylaniBootcamp.png",
     iconBg: "#1D1836",
-    date: "October 2025 - Present",
+    date: "2026 – Present",
     points: [
-      "Enrolled in Saylani’s intensive Web & App Development Bootcamp focused on modern JavaScript, React, and React Native.",
-      "Learning to build responsive web and mobile applications following industry-level architecture and best practices.",
-      "Enhancing problem-solving and teamwork skills through hands-on projects and real-world development tasks.",
-      "Continuously improving expertise in full-stack development with practical exposure to latest tools and frameworks.",
+      "Architected and deployed full-stack web applications utilizing React.js, Node.js, and Express.js, ensuring scalable codebases.",
+      "Designed and optimized structured MongoDB schemas and queries, improving data retrieval efficiency.",
+      "Collaborated within a fast-paced development environment to deliver production-ready features under strict sprint deadlines.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Entrovex",
+    icon: "/company/applotech.png",
+    iconBg: "#1D1836",
+    date: "2025 (2 Months)",
+    points: [
+      "Developed highly responsive user interfaces using React.js and Tailwind CSS, ensuring mobile-first responsiveness across all core views.",
+      "Integrated RESTful APIs into frontend applications, optimizing state management and reducing re-render overhead.",
+      "Utilized Git and GitHub for explicit version control and collaborative code reviews within a remote engineering team.",
+    ],
+  },
+  {
+    title: "Modern Web Development Certification",
+    company_name: "Saylani Mass IT Training",
+    icon: "/company/saylaniBootcamp.png",
+    iconBg: "#1D1836",
+    date: "Graduated – 2026",
+    points: [
+      "Completed comprehensive training in Modern Web Development focusing on MERN stack, Next.js, and TypeScript.",
+      "Built real-world scalable projects following production standards and industry best practices.",
     ],
   },
 ];
 
-
 const testimonials = [
-  // {
-  // 	id: 1,
-  // 	testimonial:
-  // 		"Behance is a social media platform owned by Adobe whose main focus is to showcase and discover creative work.",
-  // 	name: "Om Patel",
-  // 	image: "/socialmedia/behance.svg",
-  // 	link: "https://www.behance.net/omthecreator",
-  // },
+  {
+    id: 1,
+    testimonial:
+      "Connect with me on LinkedIn to explore my professional background, network, and development updates.",
+    name: "Farhan Khan",
+    image: "/socialmedia/linkedin.svg",
+    link: "https://www.linkedin.com/in/lestrofarhan",
+  },
   {
     id: 2,
     testimonial:
-      "LinkedIn is a business and employment-focused social media platform that works through websites and mobile apps.",
-    name: "Faisal khan",
-    image: "/socialmedia/linkedin.svg",
-    link: "https://www.linkedin.com/in/faisal-khan-345013347/",
+      "Check out my GitHub profile where I share all my open-source projects, repositories, and technical experiments.",
+    name: "lestrofarhan",
+    image: "/tech/github.webp",
+    link: "https://github.com/lestrofarhan",
   },
   {
     id: 3,
     testimonial:
-      "Dribble is a self-promotion and social networking platform for digital designers and creatives. It serves as a design portfolio.",
-    name: "Faisal khan",
-    image: "/socialmedia/dribble.svg",
-    link: "https://dribbble.com/",
-  },
-  {
-    id: 5,
-    testimonial:
-      "Also do check out my Github Profile where I have shared all my codes from basic to advanced.",
-    name: "faisal-khan-dev",
-    image: "/tech/github.webp",
-    link: "https://github.com/Faisal-Khan-dev",
+      "Feel free to reach out directly via email for full-stack project inquiries, freelance opportunities, or collaborations.",
+    name: "lestrofarhan@gmail.com",
+    image: "/web.webp",
+    link: "mailto:lestrofarhan@gmail.com",
   },
 ];
-
 
 const projects: {
 	name: string;
@@ -179,67 +161,36 @@ const projects: {
 	platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web";
 }[] = [
 	{
-		name: "DressWellTailor",
+		name: "AI Video Course Generator",
 		description:
-			"A fully functional E-Commerce + Tailoring platform built using React.js, Tailwind CSS, Express.js, and MySQL. Features include dynamic product management, online order tracking, user profiles, and light/dark mode support. Designed with a premium look and seamless user experience — one of my best and most professional projects.",
+			"Engineered a high-performance Gen AI platform featuring an automated text-to-video pipeline and agentic workflows to dynamically generate structured educational courses. Implemented asynchronous API orchestration to handle intensive video rendering tasks while maintaining an optimal user experience.",
 		tags: [
 			{
-				name: "react",
+				name: "nextjs",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "typescript",
 				color: "green-text-gradient",
 			},
 			{
-				name: "express",
+				name: "genai",
 				color: "orange-text-gradient",
 			},
 			{
-				name: "mysql",
-				color: "pink-text-gradient",
-			},
-		],
-		image: "/projectimg/dwtProject.png",
-		source_code_link: "https://github.com/moizawan07?tab=repositories",
-		platform: "Web",
-		deploy_link: "https://dresswelltailor.applotech.com/",
-	},
-	{
-		name: "Vital General Maintenance (Vial CMS)",
-		description:
-			"A modern CMS-based company management system for multi-service businesses. Built with React.js, Tailwind CSS, Framer Motion, Express.js, and MySQL. Includes advanced modules for user signup, profile management, service booking, meeting scheduling, and appointment handling — delivering both functionality and animation-rich UI.",
-		tags: [
-			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
 				name: "tailwind",
-				color: "green-text-gradient",
-			},
-			{
-				name: "framer-motion",
-				color: "orange-text-gradient",
-			},
-			{
-				name: "express",
 				color: "pink-text-gradient",
 			},
-			{
-				name: "mysql",
-				color: "green-text-gradient",
-			},
 		],
-		image: "/projectimg/vitalProject.png",
-		source_code_link: "https://github.com/moizawan07?tab=repositories",
-		platform: "Web",
-		deploy_link: "https://vitalgeneralmaintenance.com/",
+		image: "/projectimg/tekvibeProject.png",
+		source_code_link: "https://github.com/lestrofarhan",
+		platform: "Vercel",
+		deploy_link: "https://github.com/lestrofarhan",
 	},
 	{
-		name: "HRMS (Human Resource Management System)",
+		name: "Real Estate Marketplace",
 		description:
-			"A complete HRMS solution supporting multiple companies with role-based access. Developed using React.js, Node.js, Express.js, and MongoDB. The system includes features like company creation, employee invitation, salary management, attendance tracking, and leave monitoring — all under a unified dashboard for owners, admins, HR, and employees.",
+			"Built a comprehensive, production-ready full-stack platform using the MERN stack. Engineered a secure, real-time bidirectional messaging infrastructure utilizing Socket.io for instant agent communication.",
 		tags: [
 			{
 				name: "react",
@@ -257,90 +208,43 @@ const projects: {
 				name: "mongodb",
 				color: "pink-text-gradient",
 			},
+			{
+				name: "socketio",
+				color: "blue-text-gradient",
+			},
 		],
-		image: "/projectimg/mern.png",
-		source_code_link: "https://github.com/moizawan07/HRMS",
+		image: "/projectimg/vitalProject.png",
+		source_code_link: "https://github.com/lestrofarhan",
 		platform: "Vercel",
-		deploy_link: "https://hrms-o68d.vercel.app/",
+		deploy_link: "https://github.com/lestrofarhan",
 	},
 	{
-	name: "TekVive (E-Commerce Platform)",
-	description:
-		"TekVive is a complete MERN stack eCommerce solution offering a seamless shopping experience for all tech-related items including mobiles, headphones, and accessories. It features a powerful admin dashboard to manage products, inventory, orders, and users. Includes full authentication system with login, signup, and password reset.",
-	tags: [
-		{
-			name: "react",
-			color: "blue-text-gradient",
-		},
-		{
-			name: "node",
-			color: "green-text-gradient",
-		},
-		{
-			name: "express",
-			color: "orange-text-gradient",
-		},
-		{
-			name: "mongodb",
-			color: "pink-text-gradient",
-		},
-	],
-	image: "/projectimg/tekvibeProject.png",
-	source_code_link: "https://github.com/moizawan07/eCommerce_with_MERN",
-	platform: "Vercel",
-	deploy_link: "https://e-commerce-with-mern-eight.vercel.app/",
-},
-{
-	name: "Event Booking Management System",
-	description:
-		"A multi-role event booking and management system built using the MERN stack. Users can explore available venues based on location and time, while admins can manage event details, availability, and user bookings — offering a dynamic and responsive event management experience.",
-	tags: [
-		{
-			name: "react",
-			color: "blue-text-gradient",
-		},
-		{
-			name: "node",
-			color: "green-text-gradient",
-		},
-		{
-			name: "express",
-			color: "orange-text-gradient",
-		},
-		{
-			name: "mongodb",
-			color: "pink-text-gradient",
-		},
-	],
-	image: "/projectimg/eventBookingProject.png",
-	source_code_link: "https://github.com/moizawan07/EvnetBooking",
-	platform: "Vercel",
-	deploy_link: "https://evnet-booking.vercel.app/",
-},
-{
-	name: "Blog Website (React + Firebase)",
-	description:
-		"A modern blog application developed using React and Firebase. Features include user authentication, blog creation, editing, and deletion, as well as public viewing of all blogs. Delivers a clean UI with smooth functionality for both writers and readers.",
-	tags: [
-		{
-			name: "react",
-			color: "blue-text-gradient",
-		},
-		{
-			name: "firebase",
-			color: "orange-text-gradient",
-		},
-		{
-			name: "css",
-			color: "pink-text-gradient",
-		},
-	],
-	image: "/projectimg/blogProject.png",
-	source_code_link: "https://github.com/moizawan07/Blog-App-r5",
-	platform: "Netlify",
-	deploy_link: "https://blogappfigmatoreact.netlify.app/",
-},
-
+		name: "Lumina (High-Performance Blog Platform)",
+		description:
+			"Created a minimalist blogging platform leveraging Next.js and TypeScript for strict type-safety and robust architecture. Leveraged SSG and ISR to maximize SEO optimization, page speed, and server-response latency.",
+		tags: [
+			{
+				name: "nextjs",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "typescript",
+				color: "green-text-gradient",
+			},
+			{
+				name: "ssg-isr",
+				color: "orange-text-gradient",
+			},
+			{
+				name: "tailwind",
+				color: "pink-text-gradient",
+			},
+		],
+		image: "/projectimg/dwtProject.png",
+		source_code_link: "https://github.com/lestrofarhan",
+		platform: "Vercel",
+		deploy_link: "https://github.com/lestrofarhan",
+	},
 ];
 
 export { services, technologies, experiences, testimonials, projects };

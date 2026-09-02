@@ -5,11 +5,10 @@ import * as random from "maath/random";
 import { Suspense, useRef, useState } from "react";
 import type { Points as PointProps } from "three";
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const Stars = (props: any) => {
 	const ref = useRef<PointProps>(null);
 	const [sphere] = useState(() =>
-		random.inSphere(new Float32Array(6000), { radius: 1.2 }),
+		random.inSphere(new Float32Array(5000), { radius: 1.2 }),
 	);
 
 	useFrame((state, delta) => {
@@ -37,7 +36,7 @@ const Stars = (props: any) => {
 const StarsCanvas = () => {
 	return (
 		<div className="w-full h-auto absolute inset-0 z-[-1]">
-			<Canvas camera={{ position: [0, 0, 1] }}>
+			<Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 1] }}>
 				<Suspense fallback={null}>
 					<Stars />
 				</Suspense>

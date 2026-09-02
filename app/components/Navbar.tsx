@@ -41,7 +41,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <Link href="https://github.com/Faisal-Khan-dev">
+          <Link href="https://github.com/lestrofarhan" target="_blank">
             <Image
               src="/logo.png"
               width={80}
@@ -75,40 +75,43 @@ const Navbar = () => {
         </div>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <Image
-            src={toggle ? "/close.svg" : "/menu.svg"}
-            width={28}
-            height={28}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+          <button
+            type="button"
+            aria-label="Toggle navigation menu"
             onClick={() => setToggle(!toggle)}
-          />
+            className="p-1 focus:outline-none"
+          >
+            <Image
+              src={toggle ? "/close.svg" : "/menu.svg"}
+              width={28}
+              height={28}
+              alt="menu"
+              className="w-[28px] h-[28px] object-contain"
+            />
+          </button>
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-[#050816]/95 backdrop-blur-lg border border-white/10 shadow-2xl absolute top-20 right-0 mx-4 my-2 min-w-[180px] z-30 rounded-2xl transition-all duration-300`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
-                // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-poppins font-medium cursor-pointer text-[16px] transition-colors ${
+                    active === nav.title ? "text-white font-bold" : "text-secondary hover:text-white"
                   }`}
                   onClick={() => {
-                    setToggle(!toggle);
+                    setToggle(false);
                     setActive(nav.title);
                   }}
                 >
                   <Link href={`#${nav.id}`}>{nav.title}</Link>
                 </li>
               ))}
-              <li>
-                <div className="mt-2">
-                  <ResumeButton />
-                </div>
+              <li className="w-full pt-2 border-t border-white/10">
+                <ResumeButton />
               </li>
             </ul>
           </div>

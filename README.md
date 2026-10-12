@@ -1,90 +1,117 @@
-# Project 3D - Portfolio
+# Faisal Khan | 3D Interactive Portfolio
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78680563/227708528-0e803ddf-506e-4d8b-98bc-dd7bf0f1b518.png" alt="Om's Logo Image"/>
-</p>
+A modern, high-performance 3D developer portfolio built with **Next.js 14**, **React 18**, **Three.js / React Three Fiber**, **Tailwind CSS**, and **Framer Motion**.
 
-This was my first project using Vite. Initially made using tutorial of [JavaScipt Mastery](https://youtu.be/0fYi8SGA20k?feature=shared).
+## 🚀 Features
 
-Work done on it other than the tutorial:-
-- Removed unused CSS.
-- Removed Extra Animations.
-- Made UI Faster.
-- Added a Resume Button (Where you can put a link to your resume).
-- Enhanced Visibility and solved Responsive UI Problems.
+- **3D Workstation & Earth Models:** Interactive 3D scene rendering via Three.js and `@react-three/fiber` / `@react-three/drei`.
+- **Floating 3D Tech Spheres:** Interactive floating icosahedron mesh decals for technology stack showcase.
+- **Interactive Experience Timeline:** Clean, responsive work experience roadmap.
+- **Projects Showcase:** Real-world full-stack and frontend projects with live demo and GitHub repository links.
+- **Working Contact Form:** Integrated with EmailJS for direct message delivery.
+- **Fully Responsive & Accessible:** Optimized for mobile, tablet, and desktop viewports.
+- **Production & Vercel Ready:** Built with Next.js App Router and optimized for zero-config deployment on Vercel.
 
-This Project is hosted in Netlify : [3D Portfolio](https://portfoliobyompatel.netlify.app/)
+---
 
-## :star: Give A Star
+## 🛠️ Tech Stack
 
-You can also give this repository a star to show more people and they can use this repository.
+- **Framework:** [Next.js 14 (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **3D Graphics:** [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Contact Service:** [@emailjs/browser](https://www.emailjs.com/)
 
-# Getting Started
+---
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+## 💻 Getting Started Locally
 
-Prerequisites
-Before you start, make sure you have the following software installed on your computer:
+### 1. Prerequisites
 
-[![My Skills](https://skillicons.dev/icons?i=nodejs)](https://skillicons.dev)
+Make sure you have [Node.js](https://nodejs.org/) (v18.17+ or v20+) installed.
 
-
-## ℹ️ How to use this Repository?
-
-1. Clone the repository to your local machine
-
-```bash
-  git clone https://github.com/omunite215/Project_3DPortfolio.git
-
-```
-2. Navigate to the project directory
+### 2. Installation
 
 ```bash
-  cd Project_3DPortfolio
+# Clone the repository
+git clone https://github.com/Faisal-Khan-dev/Portfolio.git
+
+# Enter project directory
+cd Portfolio
+
+# Install dependencies
+npm install
 ```
-3. Install the necessary dependencies
+
+### 3. Environment Variables (Optional)
+
+Create a `.env.local` file based on `.env.example`:
+
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+NEXT_PUBLIC_EMAILJS_TO_NAME="Faisal Khan"
+NEXT_PUBLIC_EMAILJS_TO_EMAIL="your-email@example.com"
+```
+
+*(Fallbacks are included in the code if environment variables are not supplied)*
+
+### 4. Run Development Server
+
 ```bash
-  npm install
+npm run dev
 ```
 
-4. Start the development server
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### 5. Build for Production
+
 ```bash
-  npm run dev
+npm run build
+npm run start
 ```
 
-The website should now be up and running on http://localhost:3000.
+---
 
-## 🏠 Built With:
+## 🌐 Deploying to Vercel
 
-[![My Skills](https://skillicons.dev/icons?i=vscode,react,nextjs,threejs,tailwind,netlify)](https://skillicons.dev)
+This repository is pre-configured and tested for seamless deployment to **Vercel**:
 
-## 🛠 Skills
+### Method 1: Deploy via Vercel Dashboard (Recommended)
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,threejs)](https://skillicons.dev)
+1. Push your updated code to your GitHub repository:
+   ```bash
+   git add .
+   git commit -m "Production ready for Vercel deployment"
+   git push origin main
+   ```
+2. Go to [Vercel](https://vercel.com/) and click **Add New Project**.
+3. Import your **Portfolio** repository.
+4. Framework Preset will automatically detect **Next.js**.
+5. *(Optional)* Under **Environment Variables**, add:
+   - `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+   - `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+   - `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
+   - `NEXT_PUBLIC_EMAILJS_TO_NAME`
+   - `NEXT_PUBLIC_EMAILJS_TO_EMAIL`
+6. Click **Deploy**. Vercel will build and deploy your site in ~1 minute!
 
-## 🚀 About Me
-Specializations:
-- UI/UX Design.
-- Web Development
+### Method 2: Deploy via Vercel CLI
 
-## 🙋‍♂️ Connect With Me
+```bash
+# Install Vercel CLI globally
+npm i -g vercel
 
-[<img src="https://skillicons.dev/icons?i=github" />](https://github.com/omunite215)&nbsp;
-[<img src="https://skillicons.dev/icons?i=linkedin" />](https://www.linkedin.com/in/om-patel-401068143/)&nbsp;
-[<img src="https://skillicons.dev/icons?i=instagram" />](https://www.instagram.com/_21omp/)&nbsp;
-[<img src="https://skillicons.dev/icons?i=devto" />](https://portfoliobyom.netlify.app/)
+# Deploy
+vercel --prod
+```
 
-## 🗒️ Authors
-- Om Patel
+---
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <a href="https://github.com/omunite215">
-      <img src="https://skillicons.dev/icons?i=github" />
-    </a>
-  </a>
-</p>
+## 👤 Author
 
-<p align="center">
-  <img src="https://github.com/omunite215/Project_3DPortfolio/assets/78680563/2fcf609b-e802-4fec-8c82-8f55fd043437" alt="Om's Logo Image"/>
-</p>
+**Faisal Khan**
+- GitHub: [@Faisal-Khan-dev](https://github.com/Faisal-Khan-dev)
+- LinkedIn: [Faisal Khan](https://www.linkedin.com/in/faisal-khan-345013347/)

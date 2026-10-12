@@ -8,20 +8,16 @@ const ResumeButton = () => {
 			href="/resume/FaisalKhanResume.pdf"
 			target="_blank"
 			download
+			className="font-medium text-center px-4 py-2.5 flex items-center gap-2 justify-center rounded-lg transition ease-in-out bg-[#915EFF] hover:-translate-y-0.5 hover:bg-[#804dee] active:scale-95 duration-200 cursor-pointer shadow-md shadow-[#915EFF]/20"
 		>
-			<button
-				type="button"
-				className=" font-medium text-center px-3 py-3 flex gap-1 justify-center rounded-md transition ease-in-out delay-150 bg-[#915EFF] hover:-translate-y-1 hover:scale-110 hover:bg-purple-600 duration-300"
-			>
-				<Image
-					src="/resume.svg"
-					width={24}
-					height={24}
-					alt="resume"
-					className="object-contain animate-pulse"
-				/>
-				<span className="lg:block hidden text-white">Download Resume</span>
-			</button>
+			<Image
+				src="/resume.svg"
+				width={20}
+				height={20}
+				alt="resume"
+				className="object-contain animate-pulse"
+			/>
+			<span className="text-white text-sm font-semibold">Resume</span>
 		</Link>
 	);
 };

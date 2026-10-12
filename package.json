@@ -1,19 +1,17 @@
 {
-  "name": "threejs",
+  "name": "faisal-khan-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev --turbo",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@jdion/tilt-react": "^1.0.0",
     "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.16.6",
-    "emailjs": "^4.0.3",
     "framer-motion": "^11.1.9",
     "maath": "^0.10.7",
     "next": "14.2.3",

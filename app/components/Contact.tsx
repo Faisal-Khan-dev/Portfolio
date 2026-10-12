@@ -27,23 +27,34 @@ const Contact = () => {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setLoading(true);
+
+		const serviceId =
+			process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_91ssn8g";
+		const templateId =
+			process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_jjegxdr";
+		const publicKey =
+			process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "VeFeVdEHL9F9_i6xp";
+		const toName = process.env.NEXT_PUBLIC_EMAILJS_TO_NAME || "Faisal Khan";
+		const toEmail =
+			process.env.NEXT_PUBLIC_EMAILJS_TO_EMAIL || "moizahmedlap2@gmail.com";
+
 		emailjs
 			.send(
-				"service_91ssn8g",
-				"template_jjegxdr",
+				serviceId,
+				templateId,
 				{
 					from_name: form.name,
-					to_name: "Om Patel",
+					to_name: toName,
 					from_email: form.email,
-					to_email: "moizahmedlap2@gmail.com",
+					to_email: toEmail,
 					message: form.message,
 				},
-				"VeFeVdEHL9F9_i6xp",
+				publicKey,
 			)
 			.then(() => {
 				setLoading(false);
 				alert(
-					"A humble thanks for reaching me out. I will respond to you as soon as possible.",
+					"A humble thanks for reaching out. I will respond to you as soon as possible.",
 				);
 				setForm({
 					name: "",
@@ -53,6 +64,7 @@ const Contact = () => {
 			})
 			.catch((error) => {
 				setLoading(false);
+				console.error("EmailJS error:", error);
 				alert("Sorry!! Something went wrong!!");
 			});
 	};
@@ -105,9 +117,9 @@ const Contact = () => {
 					</label>
 					<button
 						type="submit"
-						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl cursor-pointer hover:bg-tertiary/80 transition-colors"
 					>
-						{loading ? "Sending..." : "Sent"}
+						{loading ? "Sending..." : "Send"}
 					</button>
 				</form>
 			</motion.div>

@@ -70,7 +70,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-2 lg:block hidden">
+        <div className="sm:block hidden">
           <ResumeButton />
         </div>
 
